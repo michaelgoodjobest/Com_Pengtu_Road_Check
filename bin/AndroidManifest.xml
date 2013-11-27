@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.road.check"
+    android:versionCode="1"
+    android:versionName="1.0.1" xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10"/>
+    
+ 
+	<uses-permission android:name="android.permission.CALL_PHONE"/>
+	
+	<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+	
+    <application 
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:name=".common.CheckApplication">
+        <activity
+            android:name=".login.Login"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Default">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".service.Trajectory"
+            android:enabled="true">
+		</service>
+        <activity android:name=".navigation.Navigation" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default"></activity>
+        <activity android:name=".report.Create" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation" android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".report.update.RoadPointPhoto" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.AlongLine" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Bed" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.CheckOther" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Dewatering" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Evenness" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Footwalk" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Intersection" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".report.update.Roadbed" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".app.RoadPointPhoto" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".app.Intersection" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".app.CheckHistoricalRecords" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+        <activity android:name=".app.CheckHistoricalRecordsDetail" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation" android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".app.About" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default"></activity>
+        <activity android:name=".app.User_Documentation" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default"></activity>
+        <activity android:name=".app.Uploading_List" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default"></activity>
+     	<activity android:name=".app.RegisterActicity" android:launchMode="standard" android:screenOrientation="portrait" android:theme="@style/Theme.Default" android:configChanges="orientation"></activity>
+         <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+    </service>
+    </application>
+    
+   	<supports-screens android:resizeable="true"
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true"
+		android:anyDensity="true"/>
+</manifest>

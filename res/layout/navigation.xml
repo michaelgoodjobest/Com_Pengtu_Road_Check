@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/navigation_v2_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <RelativeLayout
+                android:id="@+id/layout_up_direction_start_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app5_bg"
+                android:orientation="vertical"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_up_direction_start_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:text="上行起点拍照"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_start_photo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_guideboard_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app2_bg"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_guideboard_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="路牌拍照"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_guideboard_photo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_footwalk_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app4_bg"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_footwalk_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="人行道拍照"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_footwalk_photo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_intersection_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app6_bg"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_intersection_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="交叉路口拍照"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_intersection_photo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_report_create"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app3_bg"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_report_create"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="报表填写"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_report_create"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_up_direction_end_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/navigation_v2_app1_bg"
+                android:paddingBottom="3dp" >
+
+                <TextView
+                    android:id="@+id/txt_up_direction_end_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation_v2_app_title_bg"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="上行终点拍照"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_img_num_end_photo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|right"
+                    android:paddingRight="2dp"
+                    android:text="--"
+                    android:textColor="#0000ff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_start"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_start"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/start_button_outer_bg" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="3dp"
+            android:background="@drawable/start_button_inner_bg"
+            android:text="开始"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_stop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/layout_stop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/start_button_outer_bg" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="3dp"
+            android:background="@drawable/start_button_inner_bg"
+            android:text="结束"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/img_btn_direction_update"
+        android:layout_width="40dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/direction_up" />
+
+    <TextView
+        android:id="@+id/txt_round_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="道路名称"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_direction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="【方向】"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_clength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_croadwidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_flength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_froadwidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

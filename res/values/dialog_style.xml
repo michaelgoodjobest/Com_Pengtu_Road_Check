@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="dialog" parent="@android:style/Theme.Dialog">  
+		<item name="android:windowFrame">@null</item><!--Dialog的windowFrame框为无 -->  
+		<item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->  
+		<item name="android:windowIsTranslucent">false</item> <!-- 是否半透明 -->
+		<item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖-->
+		<item name="android:windowNoTitle">true</item>  
+		<item name="android:windowBackground">@drawable/corners_dialog_white</item>  
+		<item name="android:backgroundDimEnabled">true</item>  
+	</style>
+	<style name="roadselectedialog" parent="@android:style/Theme.Dialog">  
+		<item name="android:windowFrame">@null</item><!--Dialog的windowFrame框为无 -->  
+		<item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->  
+		<item name="android:windowIsTranslucent">false</item> <!-- 是否半透明 -->
+		<item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖-->
+		<item name="android:windowNoTitle">true</item> 
+		<item name="android:windowBackground">@android:color/transparent</item> <!-- 设置window背景透明 -->
+		<item name="android:backgroundDimEnabled">true</item>  
+	</style>  
+	<style name="boarddialog" parent="@android:style/Theme.Dialog">  
+		<item name="android:windowFrame">@null</item><!--Dialog的windowFrame框为无 -->  
+		<item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->  
+		<item name="android:windowIsTranslucent">false</item> <!-- 是否半透明 -->
+		<item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖-->
+		<item name="android:windowNoTitle">true</item> 
+		<item name="android:windowBackground">@android:color/transparent</item> <!-- 设置window背景透明 -->
+		<item name="android:backgroundDimEnabled">false</item>  
+	</style>
+	<style name="verifydialog" >  
+		<item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+		<item name="android:windowFrame">@null</item><!--Dialog的windowFrame框为无 -->  
+		<item name="android:windowIsTranslucent">false</item> <!-- 是否半透明 -->
+		<item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖-->
+		<item name="android:windowNoTitle">true</item>  
+		<item name="android:windowBackground">@drawable/corners_dialog_white</item>  
+	</style>  
+</resources>

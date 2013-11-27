@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 头部 -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 头部容器48 -->
+	<style name="header">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">60dp</item>
+		<item name="android:layout_gravity">top</item>
+		<item name="android:background">@drawable/header_bg</item>
+    	<item name="android:visibility">gone</item>
+    	<item name="android:orientation">vertical</item>
+	</style>
+	<!-- 按钮 -->
+	<style name="header.button">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">38dp</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:gravity">center</item>
+		<item name="android:paddingTop">0dp</item>
+		<item name="android:paddingBottom">0dp</item>
+		<item name="android:visibility">gone</item>
+        
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.5</item>
+	</style>
+	<!-- 左侧按钮 -->
+	<style name="header.button.left" parent="header.button">
+		<item name="android:layout_width">60dp</item>
+		<item name="android:layout_alignParentLeft">true</item>
+		<item name="android:layout_marginLeft">5dp</item>
+		<item name="android:paddingLeft">15dp</item>
+		<item name="android:paddingRight">0dp</item>
+		<item name="android:background">@drawable/selector_header_button_left</item>
+	</style>
+	<!-- 右侧按钮 -->
+	<style name="header.button.right" parent="header.button">
+		<item name="android:layout_width">60dp</item>
+		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:layout_marginRight">5dp</item>
+		<item name="android:paddingLeft">15dp</item>
+		<item name="android:paddingRight">15dp</item>
+		<item name="android:background">@drawable/selector_header_button_right</item>
+	</style>
+	<!-- 中间文字 -->
+	<style name="header.text">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_marginLeft">80dp</item>
+		<item name="android:layout_marginRight">80dp</item>
+		<item name="android:layout_centerInParent">true</item>
+		<item name="android:background">@null</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">22sp</item>
+		<item name="android:singleLine">true</item><!-- 当不能全部显示时用 ...代替 -->
+		<item name="android:gravity">center</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:lineSpacingMultiplier">1</item><!-- 行间距 -->
+		<item name="android:padding">0dp</item>
+		<!-- <item name="android:ellipsize">marquee</item>
+		
+		<item name="android:gravity">center</item>
+		 -->
+        <item name="android:focusable">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item><!-- 跑马灯 -->
+        <item name="android:focusableInTouchMode">true</item><!-- 通过Toch获取focu -->
+        <item name="android:scrollHorizontally">true</item><!-- TextView中内容不能完全显示是否可以水平滚动 -->
+        
+        <item name="android:shadowColor">#cc000033</item><!-- 文本的阴影颜色与android:shadowRadius一起使用 -->
+        <item name="android:shadowDx">0</item><!-- 设置阴影水平偏移量 -->
+        <item name="android:shadowDy">1</item><!-- 设置阴影垂直偏移量 -->
+        <item name="android:shadowRadius">1</item><!-- 设置阴影半径 -->
+	</style>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  style="@style/header"
+  android:id="@+id/header">
+  <Button 
+  	android:id="@+id/header_button_left"
+  	style="@style/header.button.left"/>
+  <TextView 
+  	android:id="@+id/header_text"
+  	style="@style/header.text"/>
+  <Button 
+  	android:id="@+id/header_button_right"
+  	style="@style/header.button.right"/>
+</RelativeLayout>

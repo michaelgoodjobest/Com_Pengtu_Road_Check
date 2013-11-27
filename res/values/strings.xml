@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">路检平台</string>
+    
+     <!-- 应用包名 -->
+    <string name="apk_name">com_pengtu_road_check.apk</string>
+    
+    <string name="login_hint_username">请输入用户名</string>
+    <string name="login_hint_pwd">请输入密码</string>
+    
+    <string name="main_update_dialog_title">升级提示</string>
+    <string name="main_update_dialog_message">发现新版本,是否立即更新?</string>
+    <string name="main_update_dialog_button_yes">更新</string>
+    <string name="main_update_dialog_button_no">暂不</string>
+    <string name="main_download_dialog_title">更新程序</string>
+    <string name="main_download_dialog_message">正在更新程序,请稍后...</string>
+    
+    <string name="navigation_back_dialog_title">提示</string>
+    <string name="navigation_back_dialog_message">您确定要退出该应用吗？</string>
+    <string name="navigation_back_dialog_button_yes">确定</string>
+    <string name="navigation_back_dialog_button_no">取消</string>
+    
+   	<!-- 相片类型 -->
+   	<string name="photo_type_up_origin">上行起点</string>
+   	<string name="photo_type_up_finish">上行终点</string>
+   	<string name="photo_type_down_origin">下行起点</string>
+   	<string name="photo_type_down_finish">下行终点</string>
+   	<string name="photo_type_intersection">路口</string>
+   	<string name="photo_type_disease">病害</string>
+   	<string name="photo_type_footwalk">人行道</string>
+   	<string name="photo_type_guideboard">路牌</string>
+   	
+   	<!-- 道路搜索 -->
+	<string name="search_type">0</string>   	
+	<string name="search_area">1</string>   	
+	<string name="search_rounid">2</string>   	
+</resources>
