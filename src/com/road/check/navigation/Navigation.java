@@ -1067,8 +1067,8 @@ public class Navigation extends ActivityBase {
 					""));
 			param.add(new BasicNameValuePair("tracking.speed", cApp.speed + ""));
 			param.add(new BasicNameValuePair("tracking.geohash", ""));
-			param.add(new BasicNameValuePair("tracking.lon", cApp.lat));
-			param.add(new BasicNameValuePair("tracking.lat",cApp.lng));
+			param.add(new BasicNameValuePair("tracking.lon", cApp.lng));
+			param.add(new BasicNameValuePair("tracking.lat",cApp.lat));
 			param.add(new BasicNameValuePair("tracking.remark", ""));
 			if (!cApp.lat.equals("") && !cApp.lng.equals("")) {
 				Log.d("SENDTASK+++++++++++++++++++", cApp.lat + "_" + cApp.lng);
@@ -1542,7 +1542,8 @@ public class Navigation extends ActivityBase {
 	/*********************************** 数据清理 END *******************************/
 	/***************************** 版本检测及更新 ********************************/
 	// 检测
-	class CheckTask extends AsyncTask<Void, Void, Void> {
+	class CheckTask extends AsyncTask<String, String, String> {
+		String flag ;
 		@Override
 		protected void onPreExecute() {
 			progressDialog = ProgressDialog.show(Navigation.this, "请稍候",
@@ -1550,27 +1551,38 @@ public class Navigation extends ActivityBase {
 		}
 
 		@Override
-		protected Void doInBackground(Void... params) {
+		protected String doInBackground(String... params) {
 			try {
 				// 获取最新版本号
 				List<NameValuePair> param = new ArrayList<NameValuePair>();
-				String resultStr = as.relistic.internet.HttpHelper
-						.GetResponseTextByPost("url", param, "sessionId");
-				newVER = Integer.parseInt(resultStr);
-				newVerUrl = cApp.DownLoadVer_Url;
+				param.add(new BasicNameValuePair("versionNo",cApp.versionCode+""));
+				String resultStr =GetResponseTextByPost("http://192.168.0.137:9090/szcj/phone/releaseapp!checkUpdate.action", param);
+				JSONObject jsonObject = new JSONObject(resultStr);
+				flag = jsonObject.getString("isNew");
+				System.out.println(flag);
+				if (flag.equals("false")) {
+					newVerUrl = jsonObject.getString("downloadAdd");
+					System.out.println( "下载地址"+newVerUrl);
+					cApp.DownLoadVer_Url = newVerUrl;
+					
+				}else {
+					return "1";
+				}
+//				newVER = Integer.parseInt(resultStr);
+//				newVerUrl = cApp.DownLoadVer_Url;
 			} catch (Exception ex) {
-				newVER = 1;
-				newVerUrl = "";
+				flag = "";
+				cApp.DownLoadVer_Url = "";
 				webservice_result = "-1";
 			}
-			return null;
+			return "0";
 		}
 
 		@Override
-		protected void onPostExecute(Void result) {
+		protected void onPostExecute(String result) {
 			progressDialog.dismiss();
 
-			if (newVER > cApp.versionCode && newVerUrl != "") {
+			if (!Boolean.parseBoolean(flag)&& newVerUrl != "") {
 				AlertDialog.Builder ad = new AlertDialog.Builder(
 						Navigation.this);
 				ad.setTitle(R.string.main_update_dialog_title);
@@ -1622,7 +1634,7 @@ public class Navigation extends ActivityBase {
 		HttpPost httpRequest = new HttpPost(newVerUrl);
 		// 创建参数
 		List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("version", "android"));
+//		params.add(new BasicNameValuePair("version", "android"));
 		try {
 			// 对提交数据进行编码
 			httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
@@ -1635,6 +1647,7 @@ public class Navigation extends ActivityBase {
 				// 先把从服务端来的数据转化成字节数组
 				data = EntityUtils.toByteArray((HttpEntity) httpResponse
 						.getEntity());
+				Log.d("字节数组的长度", data.length+"");
 				// 再创建字节数组输入流对象
 				bais = new ByteArrayInputStream(data);
 				File file = new File(tempFileFullPath);

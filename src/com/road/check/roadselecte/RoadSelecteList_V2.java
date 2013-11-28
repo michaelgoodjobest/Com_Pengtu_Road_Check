@@ -19,6 +19,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 import android.R.integer;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.os.AsyncTask.Status;
@@ -70,6 +71,7 @@ public class RoadSelecteList_V2 {
 	private Dialog keyboad_dialog;
 	private DatabaseService dbs;
 	private CheckApplication cApp;
+	private ProgressDialog progressDialog;
 	
 	//树形结构
 	private TreeListView tree_listView;
@@ -793,6 +795,8 @@ public class RoadSelecteList_V2 {
 		@Override
 		protected void onPreExecute() {
 //			lastPage = false;
+			progressDialog = ProgressDialog.show(baseactivity, "加载道路数据","加载中", false);
+			
 		}
 		@Override
 		protected String doInBackground(String... params) {
@@ -804,6 +808,7 @@ public class RoadSelecteList_V2 {
 		protected void onPostExecute(String result) {
 			round_list.addAll(dbs.round.getList());
 			roadListadapter.notifyDataSetChanged();
+			progressDialog.dismiss();
 		}
 	}
 	/**获取图片数量*/

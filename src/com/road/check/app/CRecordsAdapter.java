@@ -23,7 +23,7 @@ import com.road.check.model.Road_Check_Data_Table;
 
 public class CRecordsAdapter extends ArrayAdapter<Road_Check_Data_Table>{
 	private List<Road_Check_Data_Table> list;
-	private Activity activity;
+	private Activity activity; 
 	private ListView listview;
 	private AsynchronousLocationImage asynchronousImage;
 	public CRecordsAdapter(Activity activity,List<Road_Check_Data_Table> list,ListView listview) {
