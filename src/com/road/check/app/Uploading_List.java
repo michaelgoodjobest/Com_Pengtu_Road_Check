@@ -67,6 +67,7 @@ public class Uploading_List extends ActivityBase {
 
 	// 数据上传
 	private UploadingTask uploadingTask;
+	private ProgressDialog uploadProgressDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -164,9 +165,20 @@ public class Uploading_List extends ActivityBase {
 	class UploadingTask extends AsyncTask<String, String, String> {
 		int err_count=0;
 		@Override
+		protected void onProgressUpdate(String... values) {
+			// TODO Auto-generated method stub
+			uploadProgressDialog.setProgress(Integer.parseInt(values[0]));
+			uploadProgressDialog.setMax(Integer.parseInt(values[1]));
+			uploadProgressDialog.setMessage("正在上传"+values[0]+"/"+values[1]);
+		}
+		
+		@Override
 		protected void onPreExecute() {
-			progressDialog = ProgressDialog.show(Uploading_List.this, "请稍候",
-					"正在上传数据...", true);
+			uploadProgressDialog = new ProgressDialog(Uploading_List.this);
+			uploadProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			uploadProgressDialog.setMessage("请稍候，正在上传数据");
+			uploadProgressDialog.setCancelable(false);
+			uploadProgressDialog.show();
 		}
 
 		@Override
@@ -900,6 +912,7 @@ public class Uploading_List extends ActivityBase {
 									param);
 					Log.d("其他拍照", resultStr);
 				}
+				publishProgress(i+"",err_count+"");
 				if (resultStr.equals("{'success':true}")) {
 					count++;
 					continue;
@@ -922,7 +935,7 @@ public class Uploading_List extends ActivityBase {
 		@Override
 		protected void onPostExecute(String result) {
 			if (result.equals("")) {
-				progressDialog.dismiss();
+				uploadProgressDialog.dismiss();
 				selecetAll = 1;
 				img_checked.setImageResource(0);
 				dbs.road_check_table.updateUploadingState();
@@ -933,11 +946,11 @@ public class Uploading_List extends ActivityBase {
 				Toast.makeText(Uploading_List.this, "上传成功" + result,
 						Toast.LENGTH_SHORT).show();
 			} else if (result.equals("无被选")) {
-				progressDialog.dismiss();
+				uploadProgressDialog.dismiss();
 				Toast.makeText(Uploading_List.this, "未选择要上传的记录，请勾选后上传", 0).show();
 			}else {
 				String[] error =result.split("_");
-				progressDialog.dismiss();
+				uploadProgressDialog.dismiss();
 				selecetAll = 1;
 				dbs.road_check_table.updateUploadingState();
 				img_checked.setImageResource(0);
