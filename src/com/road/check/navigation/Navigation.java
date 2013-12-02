@@ -87,7 +87,7 @@ import com.road.check.roadselecte.RoadSelecteList_V2;
 import com.road.check.sqlite.DatabaseService;
 
 public class Navigation extends ActivityBase {
-	private static final int REQUEST_TIMEOUT = 7*1000;//设置请求超时7秒钟
+	private static final int REQUEST_TIMEOUT = 8*1000;//设置请求超时8秒钟
 	private static final int SO_TIMEOUT = 10*1000;  //设置等待数据超时时间10秒钟
 	private AlertDialog changeDirection_dialog;
 	public static final String GET_RESPONSE_TEXT_ERROR = "GET_RESPONSE_TEXT_ERROR";
